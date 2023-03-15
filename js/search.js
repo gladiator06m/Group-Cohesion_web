@@ -5,9 +5,9 @@ var controller = new ScrollMagic.Controller();
 $(document).ready(function () {
   var smushTween = new TimelineMax()
     .from('.smush-text', 1, {
-      fontSize: '20px',
+      fontSize: '1vw',
       opacity: 0,
-      lineHeight: '20px',
+      lineHeight: '4vh',
       ease: Power2.easeOut
     });
 
