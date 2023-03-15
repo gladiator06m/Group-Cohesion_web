@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;1,300&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;1,300&display=swap');
 
 * {
   margin: 0;
@@ -177,15 +177,13 @@ section#intro p span {
 .itembandResult p {
     color:#fff;
   font-size: 50px;
-  font-family: 'Spectral', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow:-5px -5px 0px #06418d, 3px 3px 0px #e17f43;
+  transform:rotate(-3deg);
   font-style: normal;
   letter-spacing:-3px;
-}
-
-.itembandResult p span {
-  font-family: 'Spectral', sans-serif;
-  color: #e17f43;
-  font-style: italic;
 }
 
 /* Affiche la liste des groupes & style chaque élément */
@@ -211,13 +209,29 @@ section#intro p span {
   border-bottom:#eee solid 5px;
 }
 
+.itemband .horaire {
+  text-align: center;
+  width:200px;
+  font-size:50px;
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-shadow: 5px 5px #06418d; 
+  transform:translateX(-100%);
+}
+
+.itemband:nth-child(odd) .horaire {
+  transform:translateX(100%);
+}
+
+.itemband .desc-activite {
+  width:30vw;
+}
+
 .itemband .name {
   letter-spacing: -2px;
   text-align: right;
   width: 30vw;
-}
-
-.itemband .name a {
   color: #eee;
 }
 
@@ -225,7 +239,7 @@ section#intro p span {
   transition:1s;
 }
 
-.itemband:hover .name a {
+.itemband:hover .name {
   color:#06418d!important;
 }
 
@@ -239,11 +253,13 @@ section#intro p span {
 
 .name h2 {
   font-size: 3.8em;
-  font-family: 'Montserrat', sans-serif;
-  text-transform:uppercase;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Spectral', serif;
+  /* text-transform:uppercase; */
   font-weight: bolder;
+  font-style: italic;
   transition: 1s;
-  text-shadow: #e17f43 -5px -5px 0px;
+  text-shadow: #e17f43 -2px -2px 0px;
 }
 
 .itemband:hover h2 {
@@ -257,7 +273,7 @@ section#intro p span {
   background-position: right;
 }
 
-.itemband:nth-child(odd) .name a {
+.itemband:nth-child(odd) .name {
   text-align: left;
   color: #fff;
 }
