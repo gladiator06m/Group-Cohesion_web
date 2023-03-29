@@ -1,4 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 * {
   margin: 0;
@@ -61,7 +62,12 @@ h1 span {
 }
 
 h1 {
-  color: #aaa;
+  line-height: 6vh;
+  color: #fff;
+  font-family: 'Great Vibes', serif;
+  text-transform: none;
+  font-size: 3vw;
+  text-shadow: #06418d 3px 3px 3px;
 }
 
 /*************************************** INTRO ***************************************/
@@ -111,7 +117,7 @@ section#intro p span {
     display: none;
   }
 
-  div.itembandResult {
+  div.chronoitemResult {
     display:none;
   }
 }
@@ -171,7 +177,7 @@ section#intro p span {
 
 /*************************************** LISTE DES GROUPES ***************************************/
 /* Bannière Stairway to Heaven */
-.itembandResult {
+.chronoitemResult {
   display: flex;
   flex-wrap: wrap;
   height: 20vh;
@@ -186,7 +192,7 @@ section#intro p span {
   background-size: cover;
 }
 
-.itembandResult p {
+.chronoitemResult p {
     color:#fff;
   font-size: 50px;
   font-family: 'Montserrat', sans-serif;
@@ -207,10 +213,10 @@ section#intro p span {
   align-items: flex-end;
 }
 
-.itemband {
+.chronoitem {
   display: flex;
   flex-wrap: wrap;
-  height: 30vh;
+  min-height: 30vh;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -221,7 +227,7 @@ section#intro p span {
   border-bottom:#eee solid 5px;
 }
 
-.itemband .horaire {
+.chronoitem .horaire {
   text-align: center;
   width:200px;
   font-size:50px;
@@ -232,30 +238,30 @@ section#intro p span {
   transform:translateX(-100%);
 }
 
-.itemband:nth-child(odd) .horaire {
+.chronoitem:nth-child(odd) .horaire {
   transform:translateX(100%);
 }
 
-.itemband .desc-activite {
+.chronoitem .desc-activite {
   width:30vw;
 }
 
-.itemband .name {
+.chronoitem .name {
   letter-spacing: -2px;
   text-align: right;
   width: 30vw;
   color: #eee;
 }
 
-.itemband:hover {
+.chronoitem:hover {
   transition:1s;
 }
 
-.itemband:hover .name {
+.chronoitem:hover .name {
   color:#06418d!important;
 }
 
-.itemband .photo {
+.chronoitem .photo {
   height: 24vh;
   width: 24vh;
   background-position: center center;
@@ -274,20 +280,44 @@ section#intro p span {
   text-shadow: #e17f43 -2px -2px 0px;
 }
 
-.itemband:hover h2 {
+.chronoitem:hover h2 {
   letter-spacing: 3px;
   transition: 1s;
 }
 
-.itemband:nth-child(odd) {
+.chronoitem:nth-child(odd) {
   background-color: #eeeeee;
   flex-direction: row-reverse !important;
   background-position: right;
 }
 
-.itemband:nth-child(odd) .name {
+.chronoitem:nth-child(odd) .name {
   text-align: left;
   color: #fff;
+}
+
+.chronoitem input {
+  width:500px;
+  padding:10px;
+  border-radius:50px;
+  border: none;
+  margin:5px 0px;
+}
+
+.chronoitem input[type="submit"] {
+  font-weight:bold;
+  width: 520px;
+  background-color: #e17f43;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+.chronoitem form {
+  display: flex;
+  flex-direction:column;
 }
 
 /*************************************** IMAGES DES GROUPES ***************************************/
@@ -309,7 +339,7 @@ section#intro p span {
   transition: transform 0.5s ease-out;
 }
 
-.itemband:hover .zoom-effect img {
+.chronoitem:hover .zoom-effect img {
   transform: scale(1.8);
 }
 
