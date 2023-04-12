@@ -25,6 +25,7 @@
             echo "<h3>data stored in a database successfully."
                 . " Please browse your localhost php my admin"
                 . " to view the updated data</h3>";
+                
  
             echo nl2br("\n$first_name\n $last_name\n "
                 . "$email");
